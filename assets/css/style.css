@@ -8,3 +8,27 @@ header {
 header h2 {
     font-size: 20px;
 }
+
+#start-form {
+    background-color: #f5f5f0;
+    border-radius: 20px;
+    margin: 2% 30%;
+    padding: 20px;
+}
+
+#start-form h2 {
+    font-weight: bold;
+}
+
+#vehicle-year label {
+    font-weight: bold;
+}
+
+#get-started {
+    background-color: #ff8533;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 3px 25px;
+    margin: 3% 38%;
+}
