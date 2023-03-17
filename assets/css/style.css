@@ -32,3 +32,7 @@ form label {
     padding: 3px 25px;
     margin: 3% 38%;
 }
+
+.hide {
+    display: none;
+}
