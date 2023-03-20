@@ -33,20 +33,26 @@ form label {
     margin: 3% 38%;
 }
 
-.deal {
-    background-color: #f5f5f0;
-}
-
 .deal h3 {
     font-weight: bold;
+    color: #ff8533;
 }
 
-/* #bottom-page {
-    display: flex;
-} */
+#extended-warranty {
+    text-align: center;
+    padding: 0% 15%;
+}
 
-.warranty {
+.warranty, .deal {
     background-color: #f5f5f0;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.deal {
+    background-color: black;
+    color: rgb(166, 166, 166);
 }
 
 .hide {
