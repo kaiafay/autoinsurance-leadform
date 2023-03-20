@@ -17,3 +17,35 @@ const thirdFormBtn = document.getElementById("mileage-next");
 const fourthFormBtn = document.getElementById("zipcode-next");
 const fifthFormBtn = document.getElementById("name-next");
 const endFormBtn = document.getElementById("get-quote");
+
+// event listeners for buttons to make forms move
+startFormBtn.onclick = function () {
+  startForm.setAttribute("class", "hide");
+  secondForm.classList.remove("hide");
+};
+
+secondFormBtn.onclick = function () {
+  secondForm.setAttribute("class", "hide");
+  thirdForm.classList.remove("hide");
+};
+
+thirdFormBtn.onclick = function () {
+  thirdForm.setAttribute("class", "hide");
+  fourthForm.classList.remove("hide");
+};
+
+fourthFormBtn.onclick = function () {
+  fourthForm.setAttribute("class", "hide");
+  fifthForm.classList.remove("hide");
+};
+
+fifthFormBtn.onclick = function () {
+  fifthForm.setAttribute("class", "hide");
+  endForm.classList.remove("hide");
+};
+
+endFormBtn.onclick = function () {
+  endForm.setAttribute("class", "hide");
+  bottomPage.setAttribute("class", "hide");
+  endPage.classList.remove("hide");
+};
