@@ -58,6 +58,10 @@ form label {
     color: rgb(166, 166, 166);
 }
 
+#end-page {
+    margin: 10px 0 0 10px;
+}
+
 .hide {
     display: none;
 }
