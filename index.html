@@ -10,294 +10,364 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Cover The Unexpected</title>
   </head>
 
-  <body>
+  <body data-bs-spy="scroll" data-bs-rootMargin="50% 50% 50%">
 
     <header>
-      <h2><a href='/' class="no-decoration">Cover The Unexpected</a></h2>
-    </header>
-
-    <div id="start-form" class="form">
-      <h2>Extend Your Car's Warranty for Less</h2>
-      <p>
-        Save Big on Auto Warranty Right Now. <br />
-        Submit the Form Below to Get an Instant & Free Quote Now:
-      </p>
-      <form id="vehicle-year">
-        <label for="vehicle-year" class="form-label">Vehicle Manufacturing Year</label>
-        <select  class="form-select" id="year-dropdown" name="year-dropdown">
-          <option selected>Select a Year</option>
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option>
-          <option value="2018">2018</option>
-          <option value="2017">2017</option>
-          <option value="2016">2016</option>
-          <option value="2015">2015</option>
-          <option value="2014">2014</option>
-          <option value="2013">2013</option>
-        </select>
-      </form>
-      <button type="button" id="get-started" class="btn btn-warning">Get Started</button>
-    </div>
-
-    <div id="second-form" class="form hide">
-      <h2>Select Vehicle Make and Model:</h2>
-      <form id="make-model">
-        <label for="vehicle-make">Vehicle Make</label>
-        <select class="form-select" id="make-dropdown" name="make-dropdown">
-          <option value="acura">Acura</option>
-          <option value="audi">Audi</option>
-          <option value="bmw">BMW</option>
-          <option value="buick">Buick</option>
-          <option value="cadillac">Cadillac</option>
-          <option value="chevrolet">Chevrolet</option>
-          <option value="chrysler">Chrysler</option>
-          <option value="dodge">Dodge</option>
-          <option value="fiat">Fiat</option>
-        </select>
-
-        <label for="vehicle-model">Vehicle Model</label>
-        <select class="form-select" id="model-dropdown" name="model-dropdown">
-          <option value="placeholder">Placeholder</option>
-          <option value="placeholder">Placeholder</option>
-          <option value="placeholder">Placeholder</option>
-          <option value="placeholder">Placeholder</option>
-          <option value="placeholder">Placeholder</option>
-          <option value="placeholder">Placeholder</option>
-          <option value="placeholder">Placeholder</option>
-        </select>
-      </form>
-      <button type="button" id="make-next" class="btn btn-warning">Next</button>
-    </div>
-
-    <div id="third-form" class="form hide">
-      <h2>Choose Car Mileage:</h2>
-      <form id="mileage">
-        <label for="vehicle-mileage">Vehicle Mileage</label>
-        <select class="form-select" id="mileage-dropdown" name="mileage-dropdown">
-          <option value="1-10,000">1 - 10,000</option>
-          <option value="10,000-20,000">10,000 - 20,000</option>
-          <option value="20,000-30,000">20,000 - 30,000</option>
-          <option value="30,000-40,000">30,000 - 40,000</option>
-          <option value="40,000-50,000">40,000 - 50,000</option>
-          <option value="50,000-60,000">50,000 - 60,000</option>
-          <option value="60,000-70,000">60,000 - 70,000</option>
-          <option value="70,000-80,000">70,000 - 80,000</option>
-          <option value="80,000-90,000">80,000 - 90,000</option>
-          <option value="90,000-100,000">90,000 - 100,000</option>
-          <option value="100,000-125,000">100,000 - 125,000</option>
-          <option value="125,000-200,000">125,000 - 2000,000</option>
-          <option value="200,000+">More than 200,000</option>
-        </select>
-      </form>
-      <button type="button" id="mileage-next" class="btn btn-warning">Next</button>
-    </div>
-
-    <div id="fourth-form" class="form hide">
-      <h2>What Is Your Zip Code?</h2>
-      <form id="zip-code">
-        <label for="zip-code">Zip Code</label> <br />
-        <input type="number" id="zipcode-input" name="zipcode-input" />
-      </form>
-      <button type="button" id="zipcode-next" class="btn btn-warning">Next</button>
-    </div>
-
-    <div id="fifth-form" class="form hide">
-      <h2>What Is Your Name?</h2>
-      <form id="name">
-        <label for="first-name">First Name</label> <br />
-        <input type="text" id="firstname-input" name="firstname-input" /> <br />
-
-        <label for="last-name">Last Name</label> <br />
-        <input type="text" id="lastname-input" name="lastname-input" />
-      </form>
-      <button type="button" id="name-next" class="btn btn-warning">Next</button>
-    </div>
-
-    <div id="end-form" class="form hide">
-      <h2>Your Quote Is Ready. Where Can We Send The Quote To?</h2>
-      <form id="quote">
-        <label for="phone-number">Phone Number</label> <br />
-        <input type="tel" id="phone-input" name="phone-input" /> <br />
-
-        <label for="email">Email</label> <br />
-        <input type="email" id="email-input" name="email-input" />
-      </form>
-      <button type="button" id="get-quote" class="btn btn-warning">Get My Free Quote Now</button>
-    </div>
-
-    <div id="end-page" class="hide">
-      <h2>Thank You For Submitting A Request, Joe</h2>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          <article class="offer col">
-            <!-- add placeholder image here -->
-            <img />
-            <p>Review Offers and Coverage</p>
-            <button type="button" id="offer-1" class="btn btn-warning">Let's Go</button>
-          </article>
-    
-          <article class="offer col">
-            <!-- add placeholder image here -->
-            <img />
-            <p>Review Offers and Coverage</p>
-            <button type="button" id="offer-2" class="btn btn-warning">Let's Go</button>
-          </article>
-        </div>
-      </div>
-
-      <section id="endpage-info">
-        <p>
-          We are matching you with your ideal auto warranty. Our providers will
-          offer you the specific vehicle protection you need for your 2021
-          Chevrolet Colorado. Given your responses, we believe Endurance or
-          Carshield will be the right fit. One of them will call you to discuss
-          your options.
-
-          <br />
-          <b>Some benefits of an extended auto warranty include:</b>
-          <ol>
-            <li>Comprehensive protection, including plans with unlimited miles.</li>
-            <li>Coverage for routine maintenance.</li>
-            <li>The majority of claims are approved directly and within 48 hours.
-            </li>
-            <li>Roadside assistance is available around-the-clock.</li>
-            <li>High levels of customer satisfaction on review sites.</li>
-            <li>30-day money-back guarantee.</li>
-          </ol>
-
-          Our providers give you peace of mind so you can drive, focusing on the road ahead. 
-          To obtain the quick coverage you require, kindly answer their call. 
-          You won't pay anything for this call but will save a lot on auto repair costs.
-        </p>
-      </section>
-
-      <article class="deal">
-        <h3>Cheap Car Insurance from $19/mo</h3>
-        <ul class="benefits">
-          <li>Check *Michigan Low Rates* in Less than 60 Seconds</li>
-          <li>Cheap Rates Starting at $19/month</li>
-          <li>All You Need is 60 seconds</li>
-          <li>Why Wait? --- Get A FREE Quote and Start SAVING</li>
-        </ul>
-        <button type="button" class="view-deal btn btn-warning">View Deal</button>
-      </article>
-
-      <article class="deal">
-        <h3>Compare Cheap Car Insurance Rates for FREE</h3>
-        <ul class="benefits">
-          <li>Shop insurance rates personalized for YOU!</li>
-          <li>Compare and save an average of $489/yr.!</li>
-          <li>Get insurance rates for your area in minutes.</li>
-          <li>CarInsurance.com is a FREE service dedicated to saving you BIG!</li>
-        </ul>
-        <button type="button" class="view-deal btn btn-warning">View Deal</button>
-      </article>
-    </div>
-
-    <div id="bottom-page">
-      <section id="warranty-benefits">
-        <article id="extended-warranty">
-          <h2>Extended Warranty Benefits</h2>
-          <p>
-            A car warranty is a binding contract between you and the manufacturer
-            of your car. It is an agreement that covers the expensve of replacing
-            or repairing damaged components of your car. The automaker promises
-            that all parts in your car are in proper working order. Car warranties
-            differ by company, so it is important to understand what is covered
-            and not covered under any car warranty.
-          </p>
-        </article>
-
-        <div class="container text-center">
-          <div class="row">
-            <article class="warranty col">
-              <img src="assets/images/costsavings.png" alt="purple wallet with coins falling out" height="125" width="100">
-              <h3>Cost Savings</h3>
-              <p>
-                There are car owners who think they can get the same service as any
-                other company without paying for a car warranty. The truth is that
-                some car warranty plans are less expensive than others. However,
-                it's important to shop around and find out if you can get the best
-                deal for your finances. Should I get an extended warranty on my new
-                car? Yes. If you buy a new car and pay for an extended warranty then
-                you should know that you aren't doing yourself any favors
-                financially.
-              </p>
-            </article>
-
-            <article class="warranty col">
-              <img src="assets/images/youworryless.png" alt="conversation bubbles" height="115" width="125">
-              <h3>You Worry Less</h3>
-              <p>
-                Should I get an extended warranty on my used car? Absolutely. Even
-                though it is true that such cars are cheaper, they do not hold the
-                same reliability and security as the new models. This is because the
-                market is filled with fraudulent sellers. And even if you manage to
-                buy a new car, it can have quite a high market value which can be
-                quite out of your reach. Thus, to get peace of mind, which is
-                essential. If you wish to drive on the road without worrying about
-                the car, a car warranty will prove to be of great help.
-              </p>
-            </article>
+          <div class="col-6">
+            <img src="assets/images/bhm-logo.png" width="250">
+          </div>
+          <div class="col-6 text-end">
+            <ul class="nav float-end">
+              <li><a href="#start-form" class="call-btn bg-lblue">Get Your Quote</a></li>
+            </ul>
           </div>
         </div>
+      </div>
+      
+    </header>
 
-        <article class="warranty text-center col-8">
-          <img src="assets/images/increasethevalue.png" alt="green arrow moving upwards above a stack of coins" height="100" width="215">
-          <h3>Increase The Value Of The Car</h3>
-          <p>
-            There are two types of auto warranties available on vehicles: A
-            dealer’s warranty and an extended auto warranty. Dealer’s warranties
-            can be added onto a new or used car, while extended warranties are
-            for any vehicle. The dealer’s warranty lasts for one year from the
-            date of purchase, while an extended warranty may last anywhere from
-            three to fifteen years. Should I get an extended warranty on my used
-            car? The answer is yes. Extended warranties often will cover repairs
-            to a vehicle in an accident, such as a collision, regardless of who
-            was at fault.
-          </p>
-        </article>
+    <section id="hero" class="section vh-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-1">
+            <div class="col-cont">
+              <h1 class="mt-lg-5 mb-4">Protect Your Investment with Extended Auto Warranties</h1>
+              <a href="#start-form" class="btn btn-xl bg-orange">Get Your Quote</a>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="secondsec" class="section pb-5">
+      <div class="container">
+        <div class="col-lg-10 offset-lg-1">
+
+          <div id="start-form" class="form bg-lbrown">
+            
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade show active" id="tabone" role="tabpanel" aria-labelledby="tabone-tab" tabindex="0">
+                <h2>Extend Your Car's Warranty for Less</h2>
+                <p class="mb-4">
+                  Save Big on Auto Warranty Right Now. <br />
+                  Submit the Form Below to Get an Instant & Free Quote Now:
+                </p>
+                <label for="vehicle-year" class="form-label mb-2">Vehicle Manufacturing Year</label>
+                <select  class="form-select mb-3" id="year-dropdown" name="year-dropdown">
+                  <option selected>Select a Year</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                </select>
+                <nav class="text-center">
+                  <button class="nav-link btn btn-xl bg-orange" id="next1">Get Started</button>
+                </nav>
+                <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color:#aaaaaa;">
+                  <div class="progress-bar" style="width: 0%"></div><span class="ps-2">0%</span>
+                </div>
+              </div><!-- /#tabone -->
+
+              <div class="tab-pane fade" id="tabtwo" role="tabpanel" aria-labelledby="tabtwo-tab" tabindex="0">
+
+                <h2 class="mb-4">Select Vehicle Make and Model:</h2>
+
+                  <label class="mb-2" for="vehicle-make">Vehicle Make</label>
+                  <select class="form-select mb-2" id="make-dropdown" name="make-dropdown">
+                    <option value="acura">Acura</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="buick">Buick</option>
+                    <option value="cadillac">Cadillac</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="chrysler">Chrysler</option>
+                    <option value="dodge">Dodge</option>
+                    <option value="fiat">Fiat</option>
+                  </select>
+          
+                  <label class="mb-2" for="vehicle-model">Vehicle Model</label>
+                  <select class="form-select mb-3" id="model-dropdown" name="model-dropdown">
+                    <option value="placeholder">Placeholder</option>
+                    <option value="placeholder">Placeholder</option>
+                    <option value="placeholder">Placeholder</option>
+                    <option value="placeholder">Placeholder</option>
+                    <option value="placeholder">Placeholder</option>
+                    <option value="placeholder">Placeholder</option>
+                    <option value="placeholder">Placeholder</option>
+                  </select>
+
+                <nav class="mt-4">
+                  <button class="nav-link prv-btn float-start" id="back1"><i class="fas fa-arrow-left"></i> Back</button>
+                  <button class="nav-link btn btn-xl bg-orange nxt-btn float-end" id="next2">Next</button>
+                </nav>
+
+                <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color:#aaaaaa;float:left;width:100%;">
+                  <div class="progress-bar" style="width: 10%">10%</div>
+                </div>
+                
+              </div><!-- /#tabtwo -->
+
+              <div class="tab-pane fade" id="tabthree" role="tabpanel" aria-labelledby="tabthree-tab" tabindex="0">
+                <h2 class="mb-4">Choose Car Mileage:</h2>
+
+                  <label class="mb-2" for="vehicle-mileage">Vehicle Mileage</label>
+                  <select class="form-select mb-3" id="mileage-dropdown" name="mileage-dropdown">
+                    <option value="1-10,000">1 - 10,000</option>
+                    <option value="10,000-20,000">10,000 - 20,000</option>
+                    <option value="20,000-30,000">20,000 - 30,000</option>
+                    <option value="30,000-40,000">30,000 - 40,000</option>
+                    <option value="40,000-50,000">40,000 - 50,000</option>
+                    <option value="50,000-60,000">50,000 - 60,000</option>
+                    <option value="60,000-70,000">60,000 - 70,000</option>
+                    <option value="70,000-80,000">70,000 - 80,000</option>
+                    <option value="80,000-90,000">80,000 - 90,000</option>
+                    <option value="90,000-100,000">90,000 - 100,000</option>
+                    <option value="100,000-125,000">100,000 - 125,000</option>
+                    <option value="125,000-200,000">125,000 - 2000,000</option>
+                    <option value="200,000+">More than 200,000</option>
+                  </select>
+              
+                <nav class="mt-4">
+                  <button class="nav-link prv-btn float-start" id="back2"><i class="fas fa-arrow-left"></i> Back</button>
+                  <button class="nav-link btn btn-xl bg-orange nxt-btn float-end" id="next3">Next</button>
+                </nav>
+
+                <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color:#aaaaaa;float:left;width:100%;">
+                  <div class="progress-bar" style="width: 20%">20%</div>
+                </div>
+              </div><!-- /#tabthree -->
+
+              <div class="tab-pane fade" id="tabfour" role="tabpanel" aria-labelledby="tabfour-tab" tabindex="0">
+                <h2 class="mb-4">What Is Your Zip Code?</h2>
+                
+                  <label class="mb-2" for="zip-code">Zip Code</label> <br />
+                  <input type="number" class="form-control mb-3" id="zipcode-input" name="zipcode-input" />
+                                
+                <nav class="mt-4">
+                  <button class="nav-link prv-btn float-start" id="back3"><i class="fas fa-arrow-left"></i> Back</button>
+                  <button class="nav-link btn btn-xl bg-orange nxt-btn float-end" id="next4">Next</button>
+                </nav>
+
+                <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color:#aaaaaa;float:left;width:100%;">
+                  <div class="progress-bar" style="width: 40%">40%</div>
+                </div>
+              </div><!-- /#tabfour -->
+
+              <div class="tab-pane fade" id="tabfive" role="tabpanel" aria-labelledby="tabfive-tab" tabindex="0">
+                <h2 class="mb-4">What Is Your Name?</h2>
+
+                  <label class="mb-2" for="first-name">First Name</label> <br />
+                  <input type="text" class="form-control" id="firstname-input" name="firstname-input" /> <br />
+          
+                  <label class="mb-2" for="last-name">Last Name</label> <br />
+                  <input type="text" class="form-control mb-3" id="lastname-input" name="lastname-input" />
+             
+                <nav class="mt-4">
+                  <button class="nav-link prv-btn float-start" id="back4"><i class="fas fa-arrow-left"></i> Back</button>
+                  <button class="nav-link btn btn-xl bg-orange nxt-btn float-end" id="next5">Next</button>
+                </nav>
+
+                <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color:#aaaaaa;float:left;width:100%;">
+                  <div class="progress-bar" style="width: 60%">60%</div>
+                </div>
+              </div><!-- /#tabfive -->
+
+              <div class="tab-pane fade" id="tabsix" role="tabpanel" aria-labelledby="tabsix-tab" tabindex="0">
+                <h2 class="mb-4">Your Quote Is Ready. Where Can We Send The Quote To?</h2>
+
+                <label class="mb-2" for="phone-number">Phone Number</label> <br />
+                <input type="tel" class="form-control" id="phone-input" name="phone-input" /> <br />
+        
+                <label class="mb-2" for="email">Email</label> <br />
+                <input type="email" class="form-control mb-3" id="email-input" name="email-input" />
+
+                <nav class="mt-4">
+                  <button class="nav-link prv-btn float-start" id="back5"><i class="fas fa-arrow-left"></i> Back</button>
+                  <button class="nav-link btn btn-xl bg-orange nxt-btn float-end" id="next6">Next</button>
+                </nav>
+
+                <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color:#aaaaaa;float:left;width:100%;">
+                  <div class="progress-bar" style="width: 80%">80%</div>
+                </div>
+              </div><!-- /#tabsix -->
+
+              <div class="tab-pane fade" id="tabseven" role="tabpanel" aria-labelledby="tabseven-tab" tabindex="0">
+                <h2>Thank You For Submitting A Request, Joe</h2>
+
+                <div class="progress mt-4" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="background-color:#aaaaaa;float:left;width:100%;">
+                  <div class="progress-bar" style="width: 100%">100%</div>
+                </div>
+              </div><!-- /#tabsix -->
+            </div>
+
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
+    
+
+    
+
+      <section id="thirdsec" class="p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2>Extended Warranty Benefits</h2>
+              <p>
+                A car warranty is a binding contract between you and the manufacturer
+                of your car. It is an agreement that covers the expensve of replacing
+                or repairing damaged components of your car. The automaker promises
+                that all parts in your car are in proper working order. Car warranties
+                differ by company, so it is important to understand what is covered
+                and not covered under any car warranty.
+              </p>
+            </div>
+          </div>
+        </div>
+        
       </section>
+
+      <section id="fourthsec" class="p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mb-4">
+              <div class="card-cont h-100 p-5 bg-lbrown text-center">
+                <img src="assets/images/costsavings.png" alt="purple wallet with coins falling out" height="200" class="mb-5">
+                <h3 class="mb-4">Cost Savings</h3>
+                <p>
+                  There are car owners who think they can get the same service as any
+                  other company without paying for a car warranty. The truth is that
+                  some car warranty plans are less expensive than others. However,
+                  it's important to shop around and find out if you can get the best
+                  deal for your finances. Should I get an extended warranty on my new
+                  car? Yes. If you buy a new car and pay for an extended warranty then
+                  you should know that you aren't doing yourself any favors
+                  financially.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <div class="card-cont h-100 p-5 bg-lbrown text-center">
+                <img src="assets/images/youworryless.png" alt="conversation bubbles" height="200" class="mb-5">
+                <h3 class="mb-4">You Worry Less</h3>
+                <p>
+                  Should I get an extended warranty on my used car? Absolutely. Even
+                  though it is true that such cars are cheaper, they do not hold the
+                  same reliability and security as the new models. This is because the
+                  market is filled with fraudulent sellers. And even if you manage to
+                  buy a new car, it can have quite a high market value which can be
+                  quite out of your reach. Thus, to get peace of mind, which is
+                  essential. If you wish to drive on the road without worrying about
+                  the car, a car warranty will prove to be of great help.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="card-cont p-5 bg-lbrown text-center">
+                <img src="assets/images/increasethevalue.png" alt="green arrow moving upwards above a stack of coins" height="200" class="mb-5">
+                <h3 class="mb-4">Increase The Value Of The Car</h3>
+                <p>
+                  There are two types of auto warranties available on vehicles: A
+                  dealer’s warranty and an extended auto warranty. Dealer’s warranties
+                  can be added onto a new or used car, while extended warranties are
+                  for any vehicle. The dealer’s warranty lasts for one year from the
+                  date of purchase, while an extended warranty may last anywhere from
+                  three to fifteen years. Should I get an extended warranty on my used
+                  car? The answer is yes. Extended warranties often will cover repairs
+                  to a vehicle in an accident, such as a collision, regardless of who
+                  was at fault.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+    <section id="fifthsec" class="p-5">
 
       <div class="container">
         <div class="row">
-          <article class="deal col">
-            <img src="assets/images/image-1.png" alt="person signing a document with a toy car in front of them">
-            <h3>Sign Up and Get $300 off Your New Policy!</h3>
-            <ul class="benefits">
-              <li>30-Day Money-Back Guarantee</li>
-              <li>Unlimited Miles for Vehicles Under 20 Years Old</li>
-              <li>Accepted by 350,000+ ASE-Certified Repair Shops</li>
-              <li>24/7 Live Support and Roadside Assistance</li>
-              <li>Provides coverage for high-mileage vehicles</li>
-              <li>Excellent customer service</li>
-              <li>ASE-certified repair facility of your choice</li>
-            </ul>
-            <button type="button" class="view-deal btn btn-warning">View Deal</button>
-          </article>
+          <div class="col-lg-6 mb-4">
+            <div class="card-cont bg-black h-100">
+              <img class="mb-5" src="assets/images/image-1.png" alt="person signing a document with a toy car in front of them" width="100%">
+              <div class="pt-0 p-5">
+                <h3 class="txt-orange mb-5">Sign Up and Get $300 off Your New Policy!</h3>
+                <ul class="txt-gray benefits">
+                  <li>30-Day Money-Back Guarantee</li>
+                  <li>Unlimited Miles for Vehicles Under 20 Years Old</li>
+                  <li>Accepted by 350,000+ ASE-Certified Repair Shops</li>
+                  <li>24/7 Live Support and Roadside Assistance</li>
+                  <li>Provides coverage for high-mileage vehicles</li>
+                  <li>Excellent customer service</li>
+                  <li>ASE-certified repair facility of your choice</li>
+                </ul>
+              </div>              
+            </div>
+            
+          </div>
 
-          <article class="deal col">
-            <img src="assets/images/image-2.png" alt="person holding their hands together with a toy car in front of them">
-            <h3>
-              Get a high level of vehicle protection for a low month-to-month cost.
-            </h3>
-            <ul class="benefits">
-              <li>Flexible pricing</li>
-              <li>Easy startup</li>
-              <li>Reliable protection</li>
-            </ul>
-            <button type="button" class="view-deal btn btn-warning">View Deal</button>
-          </article>
+          <div class="col-lg-6 mb-4">
+            <div class="card-cont bg-black h-100">
+              <img class="mb-5" src="assets/images/image-2.png" alt="person holding their hands together with a toy car in front of them" width="100%">
+              <div class="pt-0 p-5">
+                <h3 class="txt-orange mb-5">
+                  Get a high level of vehicle protection for a low month-to-month cost.
+                </h3>
+                <ul class="txt-gray benefits">
+                  <li>Flexible pricing</li>
+                  <li>Easy startup</li>
+                  <li>Reliable protection</li>
+                </ul>
+              </div>            
+            </div>            
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
 
+    <footer class="bg-orange pt-4 pb-2 text-center text-lg-start">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <p>&#169; 2023 TheCarWarranty.com</p>
+          </div>
+
+          <div class="col-lg-6">
+            <ul class="nav text-lg-right text-center float-lg-end">
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="assets/fontawesome/js/all.min.js"></script>  
     <script src="assets/js/script.js"></script>
+
   </body>
 </html>

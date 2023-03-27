@@ -1,3 +1,116 @@
+// tabs
+
+const triggerTabList = document.querySelectorAll('#myTab button')
+triggerTabList.forEach(triggerEl => {
+  const tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', event => {
+    event.preventDefault()
+    tabTrigger.show()
+  })
+})
+
+$("#next1").click(function () {
+  $("#tabone").removeClass("active show");
+  $("#tabtwo").addClass("active show");
+});
+
+$("#next2").click(function () {
+  $("#tabtwo").removeClass("active show");
+  $("#tabthree").addClass("active show");
+});
+
+$("#next3").click(function () {
+  $("#tabthree").removeClass("active show");
+  $("#tabfour").addClass("active show");
+});
+
+$("#next4").click(function () {
+  $("#tabfour").removeClass("active show");
+  $("#tabfive").addClass("active show");
+});
+
+$("#next5").click(function () {
+  $("#tabfive").removeClass("active show");
+  $("#tabsix").addClass("active show");
+});
+
+$("#next6").click(function () {
+  $("#tabsix").removeClass("active show");
+  $("#tabseven").addClass("active show");
+});
+
+
+$("#back1").click(function () {
+  $("#tabtwo,#tabthree").removeClass("active show");
+  $("#tabone").addClass("active show");
+});
+
+$("#back2").click(function () {
+  $("#tabthree").removeClass("active show");
+  $("#tabtwo").addClass("active show");
+});
+
+$("#back3").click(function () {
+  $("#tabfour").removeClass("active show");
+  $("#tabthree").addClass("active show");
+});
+
+$("#back4").click(function () {
+  $("#tabfive").removeClass("active show");
+  $("#tabfour").addClass("active show");
+});
+
+$("#back5").click(function () {
+  $("#tabsix").removeClass("active show");
+  $("#tabfive").addClass("active show");
+});
+
+$("#back6").click(function () {
+  $("#tabseven").removeClass("active show");
+  $("#tabsix").addClass("active show");
+});
+
+// Scroll
+	
+vph = $(window).height();
+
+$(window).scroll(function () {
+    // set distance user needs to scroll before we start fadeIn
+    if ($(this).scrollTop() > vph){
+      $('header').addClass('scrolled');
+    } else {
+      $('header').removeClass('scrolled');
+    }
+
+    
+  });
+
+// Equal height tabs
+
+// Select and loop the container element of the elements you want to equalise
+$('#pills-tabContent').each(function(){  
+      
+  // Cache the highest
+  var highestBox = 0;
+  
+  // Select and loop the elements you want to equalise
+  $('.tab-pane', this).each(function(){
+    
+    // If this box is higher than the cached highest then store it
+    if($(this).height() > highestBox) {
+      highestBox = $(this).height() + 140; 
+    }
+  
+  });  
+        
+  // Set the height of all those children to whichever was highest 
+  $('.tab-pane',this).height(highestBox);
+                
+}); 
+
+
+/*
 // forms
 const startForm = document.getElementById("start-form");
 const secondForm = document.getElementById("second-form");
@@ -49,3 +162,4 @@ endFormBtn.onclick = function () {
   bottomPage.setAttribute("class", "hide");
   endPage.classList.remove("hide");
 };
+*/
