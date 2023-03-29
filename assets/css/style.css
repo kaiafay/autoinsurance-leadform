@@ -90,6 +90,7 @@ header {
     background-color: #000033;
     padding: 20px;
     position: relative;
+    z-index: 2;
     -webkit-transition: 0.3s;
 	-moz-transition: 0.3s;
 	transition: 0.3s;
@@ -254,14 +255,37 @@ footer ul.nav li:last-child {
     border-right: 0;
 }
 
+@media (min-width: 992px) {
+    .mob {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    #hero h1 {
+        font-size: 64px;
+    }
+    
+    section#secondsec {
+        margin-top: 0;
+        padding-top: 24px;
+    }
+}
+
 @media (max-width: 991px) {
 
     #hero {
+        background: #ffffff;
         background-size: 100%;
+        height: auto!important;
     }
 
     #hero h1 {
         font-size: 56px;
+    }
+
+    #hero img {
+        width: 60%;
     }
 
     #hero .col-cont {
@@ -282,12 +306,54 @@ footer ul.nav li:last-child {
     footer ul.nav {
         display: -webkit-inline-box;
     }
-}
 
-@media (max-width: 991px) {
     header img {
-        width: 100%;
+        width: 130px;
     }
 }
+
+@media (max-width: 767px) {
+    header a.call-btn {
+        padding-top: 18px;
+    }
+
+    #hero h1 {
+        font-size: 40px;
+    }
+
+    #hero img {
+        width: 100%;
+    }
+
+    h2,h3 {
+        font-size: 32px;
+    }
+
+    p,ul li {
+        font-size: 20px;
+    }
+
+    .btn-xl {
+        font-size: 24px;
+    }
+
+    .form {
+        padding: 40px 40px;
+    }
+
+    button.nav-link {
+        font-size: 20px;
+    }
+
+    #fourthsec img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer p, footer a {
+        font-size: 16px;
+    }    
+}
+
 
 
